@@ -6,14 +6,13 @@ puts `java -version`
 
 a = (1..100).to_a
 
-10.times do
-  Thread.new do
-    p a.collect { |i| i }.size
-    p a.collect { |i| i }.size
-    p a.collect { |i| i }.size
+Thread.new do
+  loop do
+    a.collect { |i| i + 1 }
   end
-  Thread.new do
-    10.times { a << 1 }
-  end
+end
+
+1000.times do |i|
+  a << i
 end
 

@@ -4,15 +4,15 @@ puts RUBY_DESCRIPTION
 puts
 puts `java -version`
 
-a = (1..100).to_a
+a = []
 
 Thread.new do
   loop do
-    a.collect { |i| i + 1 }
+    a << Time.now.to_f
   end
 end
 
-1000.times do |i|
-  a << i
+1000.times do
+  p a.collect { |f| f.to_i }.size
 end
 

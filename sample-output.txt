@@ -1,0 +1,50 @@
+
+jruby --dev -G test.rb
+
+jruby 1.7.26 (1.9.3p551) 2016-08-26 69763b8 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 [darwin-x86_64]
+
+java version "1.8.0_60"
+Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
+
+0
+0
+0
+0
+0
+0
+0
+RubyArray.java:2400:in `collect': java.lang.ArrayIndexOutOfBoundsException: 2
+	from RubyArray.java:2409:in `collect19'
+	from RubyArray$INVOKER$i$0$0$collect19.gen:-1:in `call'
+	from CachingCallSite.java:143:in `callBlock'
+	from CachingCallSite.java:154:in `callIter'
+	from CallNoArgBlockNode.java:64:in `interpret'
+	from CallNoArgNode.java:60:in `interpret'
+	from FCallOneArgNode.java:36:in `interpret'
+	from NewlineNode.java:105:in `interpret'
+	from ASTInterpreter.java:112:in `INTERPRET_BLOCK'
+	from Interpreted19Block.java:206:in `evalBlockBody'
+	from Interpreted19Block.java:157:in `yield'
+	from Interpreted19Block.java:130:in `yieldSpecific'
+	from Block.java:111:in `yieldSpecific'
+	from RubyFixnum.java:275:in `times'
+	from RubyFixnum$INVOKER$i$0$0$times.gen:-1:in `call'
+	from CachingCallSite.java:316:in `cacheAndCall'
+	from CachingCallSite.java:145:in `callBlock'
+	from CachingCallSite.java:154:in `callIter'
+	from CallNoArgBlockNode.java:64:in `interpret'
+	from NewlineNode.java:105:in `interpret'
+	from BlockNode.java:71:in `interpret'
+	from RootNode.java:129:in `interpret'
+	from ASTInterpreter.java:121:in `INTERPRET_ROOT'
+	from Ruby.java:884:in `runInterpreter'
+	from Ruby.java:892:in `runInterpreter'
+	from Ruby.java:733:in `runNormally'
+	from Ruby.java:578:in `runFromMain'
+	from Main.java:393:in `doRunFromMain'
+	from Main.java:288:in `internalRun'
+	from Main.java:217:in `run'
+	from Main.java:197:in `main'
+make: *** [test] Error 1
+
